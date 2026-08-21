@@ -28,7 +28,7 @@ Because of computational resource limitations during development, the current ex
 ## Tools
 
 - **R / Posit Cloud** — data cleaning, exploratory data analysis, and visualization
-- **SQL/ Google BigQuery** — data validation, grouped analytical queries, and cross-tool validation with R
+- **SQL / Google BigQuery** — data validation, grouped analytical queries, and cross-tool validation with R
 - **Tableau** — planned dashboard development
 - **Microsoft Word** — analytical reporting
 - **GitHub** — project documentation and version control
