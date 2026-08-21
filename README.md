@@ -28,7 +28,7 @@ Because of computational resource limitations during development, the current ex
 ## Tools
 
 - **R / Posit Cloud** — data cleaning, exploratory data analysis, and visualization
-- **SQL** — planned analytical querying
+- **SQL/ Google BigQuery** — data validation, grouped analytical queries, and cross-tool validation with R
 - **Tableau** — planned dashboard development
 - **Microsoft Word** — analytical reporting
 - **GitHub** — project documentation and version control
@@ -44,6 +44,10 @@ The initial EDA identified several patterns within the BRFSS 2024 development sa
 - Participants reporting no physical activity had a higher diabetes percentage (**31.7%**) than physically active participants (**24.9%**).
 - Participants with less than a high school education had the highest diabetes percentage by education level (**37.0%**).
 - Diabetes percentages decreased across the broad household-income categories, from **34.8%** among participants earning less than $25,000 to **20.3%** among those earning $100,000 or more.
+  
+## SQL Analysis
+
+SQL analysis was completed in Google BigQuery to validate the cleaned dataset and reproduce the core R-based EDA summaries. Eight SQL queries were used for data validation and grouped analyses by diabetes status, sex, age group, BMI category, physical activity, education, and household income. The BigQuery results matched the R results, providing cross-tool validation of the analysis workflow.
 
 ## Important Limitations
 
@@ -79,5 +83,14 @@ brfss-2024-diabetes-risk-analysis/
 ├── R/
 │   ├── 02_data_cleaning.R
 │   └── 03_eda.R
+├── SQL/
+│   ├── 01_data_validation.sql
+│   ├── 02_diabetes_status_distribution.sql
+│   ├── 03_diabetes_by_sex.sql
+│   ├── 04_diabetes_by_age_group.sql
+│   ├── 05_diabetes_by_bmi_category.sql
+│   ├── 06_diabetes_by_physical_activity.sql
+│   ├── 07_diabetes_by_education_level.sql
+│   └── 08_diabetes_by_income_level.sql
 ├── .gitignore
 └── README.md
